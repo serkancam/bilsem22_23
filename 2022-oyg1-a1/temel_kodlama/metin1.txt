@@ -1,0 +1,8 @@
+Dersin başında öğrencilere:
+“Çocuklar Collatz Teoremi, diğer adıyla dolu taneleri problemini duyan var mı?”
+sorusu yöneltilerek cevapları alınır. Ardından bu teoremi duyanlar varsa öğrencilerin teorem hakkında bildiklerini öğrenebilmek adına öğrencilere söz hakkı verilebilir. Teorem hakkında herhangi bir ön
+bilgiye sahip olmayan öğrencilere:
+“Matematik alanında çözümlenemeyen veya çözümü ispatlanamayan birçok teorem bulunmak
+tadır. Collatz Teoremi de bu problemlerden biri olup dolu taneleri problemi olarak da adlandırılmaktadır. Matematik alanında ünlü bilim insanlarından Paul Erdos “Matematik, böyle problemler için hazır olmayabilir.” ifadesiyle Collatz teoreminin ispatının zorluğuna işaret etmiştir.
+Aynı zamanda bazı matematik enstitüleri Collatz problemini milenyum matematik sorularından biri olarak nitelemiş ve teoremin ispatına 1 milyon dolarlık
+para ödülü koymuş tur. Bu ödülü bugüne kadar kazanan kimse olmamıştır.”
