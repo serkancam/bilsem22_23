@@ -31,7 +31,7 @@ torba = list(range(1,91))
 while True:    
     cekilen=choice(torba)
     torba.remove(cekilen)
-    #4. adım
+    #4. adım, 5. adım
     print(cekilen,"kimde var?")
     if kart1.count(cekilen)==1:
         print("kart1: bende var.")
@@ -39,5 +39,22 @@ while True:
     else:
         print("kart1: bende yok")
     
+    if kart2.count(cekilen)==1:
+        print("kart2: bende var.")
+        kart2.remove(cekilen)
+    else:
+        print("kart2: bende yok.")
+    
+    print(30*"-")
+    sleep(0.4)
+    if len(kart1)==0 or len(kart2)==0:
+        break
 
-   
+print(30*"*")   
+if len(kart1)==0:
+    print("kart1: tombala!")
+
+if len(kart2)==0:
+    print("kart2: tombala!")
+print("kart1:",kart1)   
+print("kart2:",kart2)
