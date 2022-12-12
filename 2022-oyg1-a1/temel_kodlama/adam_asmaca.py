@@ -1,13 +1,43 @@
 from random import choice
 
-dosya = open("/home/serkan/Belgeler/yillar/2022-2023/bilsem22_23/2022-oyg1-a1/temel_kodlama/sehirler.txt","r", encoding="utf-8")
+def kelime_sec(kelimeler:list)->str:
+    secilen = choice(kelimeler)
+    return secilen
+sorular =["ankara","edirne","muş","izmir","hatay"]
 
-sorular = dosya.read().split()
+soru = kelime_sec(sorular)
+harfler=list(set(soru))
+girilen_harfler=list()
+bilinen_harfler=list()
+hak=8
 
-dosya.close()
+while hak>0:
+    harf=""
+    #harf al
+    while True:
+        harf=input("\nharf giriniz:")
+        if len(harf)==1 and harf not in girilen_harfler and harf.isalpha():
+            girilen_harfler.append(harf)
+            break
+    # harf kelimede var mı yokmu=
+    if harf in harfler:
+        bilinen_harfler.append(harf)
+    else:
+        hak=hak-1
+        print(f" {hak} hakkınız kaldı.")      
+        
+    # metni yazdır
+    for i in soru:
+        if i in bilinen_harfler:
+            print(i,end=" ")
+        else:
+            print("_",end=" ")
+    # kazanma durumu
+    if len(harfler)==len(bilinen_harfler):
+        print("\ntebrikler!")
+        break
+    
 
-soru = choice(list(sorular))
-print(soru)
 
 
 
