@@ -15,6 +15,7 @@
 # 14. adım bitir
 
 from random import choice
+from adam_asmaca_cizim import adam_asmaca_ciz
 #1. adım
 sorular = ["adana","urfa","edirne","izmir","ankara"]
 #2. adım
@@ -31,7 +32,8 @@ while hak>0:
     harf=""
     while True:
         #8. adım
-        print(f"\n{hak} hakkın var.")
+        print(f"\n{hak} hakkın var.")      
+
         harf=input("\n harf giriniz:")
         #9. adım
         if len(harf)==1 and harf not in soylenen_harfler and harf.isalpha():
@@ -43,6 +45,7 @@ while hak>0:
     else:
         hak=hak-1
         soylenen_harfler.append(harf)
+        adam_asmaca_ciz(hak)
     #11.adım
     for h in soru:
         if h in bilinen_harfler:
