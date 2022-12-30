@@ -24,23 +24,35 @@ clock = pygame.time.Clock()
 player_img = pygame.image.load("temel_kodlama/playerShip1.png").convert()
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self,x,y):
+    def __init__(self,x,y,isim,durum):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.transform.scale(player_img, (50, 38))
         # self.image.set_colorkey(BLACK)
+        if durum:
+            self.image = pygame.transform.flip(self.image, False, True)
+            
         self.rect = self.image.get_rect()
         self.radius = 20
+        self.isim=isim
        
         self.rect.centerx =x
         self.rect.bottom = y     
     def update(self):
         self.speedx = 0
+
         keystate = pygame.key.get_pressed()
-        if keystate[pygame.K_LEFT]:
+
+        if keystate[pygame.K_LEFT] and self.isim==1:
             self.speedx = -8
-        if keystate[pygame.K_RIGHT]:
-            self.speedx = 8        
+        if keystate[pygame.K_RIGHT] and self.isim==1:
+            self.speedx = 8  
+        if keystate[pygame.K_a] and self.isim==2:
+            self.speedx=-8 
+        if keystate[pygame.K_d] and self.isim==2:
+            self.speedx=8  
+
         self.rect.x += self.speedx
+
         if self.rect.right > WIDTH:
             self.rect.right = WIDTH
         if self.rect.left < 0:
@@ -55,10 +67,14 @@ while running:
         mobs = pygame.sprite.Group()
         bullets = pygame.sprite.Group()
         powerups = pygame.sprite.Group()
-        player1 = Player(10,50)
-        player2 = Player(10,430)
+        player1 = Player(10,50,1,True)
+        player2 = Player(10,430,2,False)
+        # player3 = Player(10,150,3)
+        # player4 = Player(10,250,4)
         all_sprites.add(player1)
         all_sprites.add(player2)
+        # all_sprites.add(player3)
+        # all_sprites.add(player4)
         
       
 

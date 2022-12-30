@@ -31,5 +31,5 @@ dikdortgen_alani_bul(38,52)
 diktortgenprizma_hacmi_bul(at2=5,at3=10,at1=8)
 diktortgenprizma_hacmi_bul(3,5,8)
 diktortgenprizma_hacmi_bul(3,at3=5,at2=8)
-diktortgenprizma_hacmi_bul(at3=3,5,8)# yasak işlem isimle gönderme başlarsa sağdakilere de isimle gitmeli
+#diktortgenprizma_hacmi_bul(at3=3,5,8)# yasak işlem isimle gönderme başlarsa sağdakilere de isimle gitmeli
 
